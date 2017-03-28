@@ -7,51 +7,63 @@ using System.Threading.Tasks;
 
 namespace MorseTranslator.MorseTranslatorResources
 {
-    class MorseCodeTable
+    class MorseCodeAlphabet
     {
-        public Hashtable MorseCode = new Hashtable();
+        public Hashtable Code = new Hashtable();
 
-        public MorseCodeTable()
+        public MorseCodeAlphabet()
         {
-            MorseCode.Add("A", "_.");
-            MorseCode.Add("B", "_...");
-            MorseCode.Add("C", "_._.");
-            MorseCode.Add("D", "_..");
-            MorseCode.Add("E", ".");
-            MorseCode.Add("F", ".._.");
-            MorseCode.Add("G", "__.");
-            MorseCode.Add("H", "....");
-            MorseCode.Add("I", "..");
-            MorseCode.Add("J", ".___");
-            MorseCode.Add("K", "_._");
-            MorseCode.Add("L", "._..");
-            MorseCode.Add("M", "__");
-            MorseCode.Add("N", "_.");
-            MorseCode.Add("O", "___");
-            MorseCode.Add("P", ".__.");
-            MorseCode.Add("Q", "__._");
-            MorseCode.Add("R", "._.");
-            MorseCode.Add("S", "...");
-            MorseCode.Add("T", "_");
-            MorseCode.Add("U", ".._");
-            MorseCode.Add("V", "..._");
-            MorseCode.Add("W", ".__");
-            MorseCode.Add("X", "_.._");
-            MorseCode.Add("Y", "_.__");
-            MorseCode.Add("Z", "__..");
+            Code.Add("A", "_.");
+            Code.Add("B", "_...");
+            Code.Add("C", "_._.");
+            Code.Add("D", "_..");
+            Code.Add("E", ".");
+            Code.Add("F", ".._.");
+            Code.Add("G", "__.");
+            Code.Add("H", "....");
+            Code.Add("I", "..");
+            Code.Add("J", ".___");
+            Code.Add("K", "_._");
+            Code.Add("L", "._..");
+            Code.Add("M", "__");
+            Code.Add("N", "_.");
+            Code.Add("O", "___");
+            Code.Add("P", ".__.");
+            Code.Add("Q", "__._");
+            Code.Add("R", "._.");
+            Code.Add("S", "...");
+            Code.Add("T", "_");
+            Code.Add("U", ".._");
+            Code.Add("V", "..._");
+            Code.Add("W", ".__");
+            Code.Add("X", "_.._");
+            Code.Add("Y", "_.__");
+            Code.Add("Z", "__..");
 
-            MorseCode.Add("1", ".____");
-            MorseCode.Add("2", "..___");
-            MorseCode.Add("3", "...__");
-            MorseCode.Add("4", "...._");
-            MorseCode.Add("5", ".....");
-            MorseCode.Add("6", "_....");
-            MorseCode.Add("7", "__...");
-            MorseCode.Add("8", "___..");
-            MorseCode.Add("9", "____.");
-            MorseCode.Add("0", "_____");
+            Code.Add("1", ".____");
+            Code.Add("2", "..___");
+            Code.Add("3", "...__");
+            Code.Add("4", "...._");
+            Code.Add("5", ".....");
+            Code.Add("6", "_....");
+            Code.Add("7", "__...");
+            Code.Add("8", "___..");
+            Code.Add("9", "____.");
+            Code.Add("0", "_____");
 
         }
+
+        public string GetMorseCodeOfLetter(string letter)
+        {
+            return Code[letter].ToString();          
+        }
+
+        public string GetLetterOfMorseCode(string code)
+        {
+            //TODO
+            return null;
+        }
+
 
 
     }

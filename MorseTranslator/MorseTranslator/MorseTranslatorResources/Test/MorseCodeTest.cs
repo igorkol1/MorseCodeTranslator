@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace MorseTranslator.MorseTranslatorResources.Test
 {
-    public class MorseCodeTableTest
+    public class MorseCodeTest
     {
         MorseCodeAlphabet MorseAlphabet = new MorseCodeAlphabet();
 

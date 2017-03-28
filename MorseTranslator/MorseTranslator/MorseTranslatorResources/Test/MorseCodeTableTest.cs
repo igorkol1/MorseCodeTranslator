@@ -29,5 +29,7 @@ namespace MorseTranslator.MorseTranslatorResources.Test
             Assert.IsNotEmpty(MorseAlphabet.GetMorseCodeOfLetter(Others.GetRandomLetter()));
         }
 
+
+
     }
 }

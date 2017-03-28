@@ -76,9 +76,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="MorseTranslatorResources\MorseCode.cs" />
+    <Compile Include="MorseTranslatorResources\Translator\MorseCode.cs" />
     <Compile Include="MorseTranslatorResources\Others.cs" />
     <Compile Include="MorseTranslatorResources\Test\MorseCodeTableTest.cs" />
+    <Compile Include="MorseTranslatorResources\Translator\TranslatorFromAlphabet.cs" />
+    <Compile Include="MorseTranslatorResources\Translator\TranslatorFromMorseCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

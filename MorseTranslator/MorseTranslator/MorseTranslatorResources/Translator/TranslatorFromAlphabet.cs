@@ -12,34 +12,54 @@ namespace MorseTranslator.MorseTranslatorResources.Translator
 
         public string Translate(string textToTranslate)
         {
-            return null;
+            string translatedText ="";
+
+            textToTranslate = FormatText(textToTranslate);
+
+            if (CheckIfTextConsistOnlyLettersAndNumbers(textToTranslate))
+            {
+                foreach (char letter in textToTranslate)
+                {
+                    translatedText += TranslateChar(letter)+ "\t";
+                }
+               
+            }
+            else
+            {
+                return "ERROR: Text contains invalid characters";
+            }
+
+            return translatedText;
         }
 
-        public Boolean IsTextProperToTranslate(string text)
+        private string TranslateChar(char chr)
         {
-            return false;
+            return MorseAlphabet.GetMorseCodeOfLetter(chr.ToString());
         }
 
         private string FormatText(string text)
         {
-            return text.Trim().ToUpper();
+            return text.ToUpper().Replace(" ","");
         }
 
-        private void CheckIfTextConsistOnlyLettersAndNumbers(string text)
+        public bool CheckIfTextConsistOnlyLettersAndNumbers(string text)
         {
+            bool status = true;
+
             text = FormatText(text);
 
             foreach(char letter in text)
             {
                 if (!CheckIfCharIsLetterOrDigit(letter))
                 {
-
+                    status = false;
+                    break;
                 }
             }
-
+            return status;
         }
 
-        private Boolean CheckIfCharIsLetterOrDigit(char chr)
+        private bool CheckIfCharIsLetterOrDigit(char chr)
         {
             return Char.IsLetterOrDigit(chr);
         }

@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.translateButton = new System.Windows.Forms.Button();
+            this.inputText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.outputText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ClearButton = new System.Windows.Forms.Button();
+            this.typeOfTranslation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // translateButton
             // 
-            this.button1.Location = new System.Drawing.Point(431, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Translate";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.translateButton.Location = new System.Drawing.Point(431, 313);
+            this.translateButton.Name = "translateButton";
+            this.translateButton.Size = new System.Drawing.Size(127, 23);
+            this.translateButton.TabIndex = 0;
+            this.translateButton.Text = "Translate";
+            this.translateButton.UseVisualStyleBackColor = true;
+            this.translateButton.Click += new System.EventHandler(this.TranslateButton_Click);
             // 
-            // textBox1
+            // inputText
             // 
-            this.textBox1.Location = new System.Drawing.Point(-1, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(571, 75);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.inputText.Location = new System.Drawing.Point(-1, 73);
+            this.inputText.Multiline = true;
+            this.inputText.Name = "inputText";
+            this.inputText.Size = new System.Drawing.Size(571, 75);
+            this.inputText.TabIndex = 1;
+            this.inputText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -66,13 +66,13 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Text To Translate";
             // 
-            // textBox2
+            // outputText
             // 
-            this.textBox2.Location = new System.Drawing.Point(-1, 176);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(571, 119);
-            this.textBox2.TabIndex = 3;
+            this.outputText.Location = new System.Drawing.Point(-1, 176);
+            this.outputText.Multiline = true;
+            this.outputText.Name = "outputText";
+            this.outputText.Size = new System.Drawing.Size(571, 119);
+            this.outputText.TabIndex = 3;
             // 
             // label2
             // 
@@ -83,27 +83,28 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Translated Text";
             // 
-            // button2
+            // ClearButton
             // 
-            this.button2.Location = new System.Drawing.Point(5, 313);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ClearButton.Location = new System.Drawing.Point(5, 313);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(127, 23);
+            this.ClearButton.TabIndex = 5;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // comboBox1
+            // typeOfTranslation
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.typeOfTranslation.FormattingEnabled = true;
+            this.typeOfTranslation.Items.AddRange(new object[] {
             "Translate Alphabet to Morse Code",
             "Translate Morse Code to Alphabet"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(422, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Tag = "";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.typeOfTranslation.Location = new System.Drawing.Point(5, 26);
+            this.typeOfTranslation.Name = "typeOfTranslation";
+            this.typeOfTranslation.Size = new System.Drawing.Size(422, 24);
+            this.typeOfTranslation.TabIndex = 6;
+            this.typeOfTranslation.Tag = "";
+            this.typeOfTranslation.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -120,13 +121,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 356);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.typeOfTranslation);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.outputText);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.inputText);
+            this.Controls.Add(this.translateButton);
             this.Name = "Form1";
             this.Text = "Morse Translator";
             this.ResumeLayout(false);
@@ -136,13 +137,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button translateButton;
+        private System.Windows.Forms.TextBox inputText;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox outputText;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button ClearButton;
+        private System.Windows.Forms.ComboBox typeOfTranslation;
         private System.Windows.Forms.Label label3;
     }
 }
